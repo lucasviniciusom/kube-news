@@ -21,9 +21,9 @@ jobs:
       - name: Build e Push Docker hub
         uses: docker/build-push-action@v6
         with:
-          context: ./kube-news/src
+          context: ./src
           push: true
-          file: ./kube-news/src/Dockerfile
+          file: ./src/Dockerfile
           tags: |
             lucasviniciusom/kube-news:v${{github.run_number}}          
             lucasviniciusom/kube-news:latest            
